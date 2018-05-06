@@ -1,0 +1,39 @@
+def input_operand():
+    operation = input('ввести операцию: ')
+    return operation
+def input_value():
+    try:
+        x = float(input('Ввести цифру: '))
+    except:
+        print('Вы ввели не число')
+        return input_value()
+    return x
+def kr():
+    check=1
+    while check == 1:
+
+        #
+        x = input_value()
+
+
+        operation=input_operand()
+        a =input_value()
+        #
+        if operation == '+':
+           cum = x+a
+           print('{} + {} = {}'.format(x, a, cum))
+        elif operation == '-':
+            cum = x - a
+            print('{} - {} = {}'.format(x, a, cum))
+
+        elif operation == '*':
+            cum = x * a
+            print('{} * {} = {}'.format(x, a, cum))
+        elif operation == '/':
+            cum = x / a
+            print('{} / {} = {}'.format(x, a, cum))
+        else:
+            print('Всё плохо')
+        print('Посчитать заново? Введите 1 если да')
+        check = int(input())
+kr()
